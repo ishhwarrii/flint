@@ -18,6 +18,15 @@ public class Database {
         return store.get(key);
     }
 
+    public boolean exists(String key) {
+        return store.containsKey(key);
+    }
 
-    
+    public boolean delete(String key) {
+        if (store.containsKey(key)) {
+            store.remove(key);
+            return true;
+        }
+        return false;
+    }
 }
