@@ -1,4 +1,4 @@
-package com.ishhwarrii.flint;
+package com.ishhwarrii.flint.storage;
 
 import java.util.HashMap;
 
