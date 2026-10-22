@@ -16,6 +16,8 @@ public class CommandDispatcher {
         this.database = database;
         register("SET", new SetCommand());
         register("GET", new GetCommand());
+        register("DEL", new DelCommand());
+        register("EXISTS", new ExistsCommand());
     }
 
     private void register(String name, Command command) {
@@ -30,3 +32,4 @@ public class CommandDispatcher {
         return command.execute(database, args);
     }
 }
+
